@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+		*
+		{
+			margin: 0px;
+			background-color: lightgoldenrodyellow;
+		}
+
+		section
+		{
+			margin: 10px;
+			padding: 10px;
+		}
+		#Logo
+		{
+			height: 50px;
+			border-radius: 15px;
+			border: 2px darkred;
+		}
+		header
+		{
+			    margin: 0px;
+			    padding: 10px;
+			    background-color: lightgoldenrodyellow;
+			    height: 60px;
+			    display: flex;
+			    align-items: center;
+			    justify-content: space-between;
+			    align-content: center;
+			    flex-wrap: wrap;
+			    flex-direction: row;
+			}
+
+			header > a
+			{
+				background-color: yellow;
+				color: blueviolet;
+				text-decoration: none;
+				padding: 10px;
+				border-radius: 10px;
+				border: 2px solid darkred;
+			}
+
+			header > a:hover
+			{
+				background-color: darkblue;
+				color: yellow;
+				border: 2px solid black;
+			}
+
+
+			.tagline
+			{
+				 font-size: 1.5rem;
+				 font-weight: bold;
+				 color:  #ff5720; 
+				 text-transform: uppercase;
+				 text-align: center;
+				 padding: 1vw 1vw;
+				 border: 2px solid darkblue;
+				 border-radius: 10px;
+				 background: #ffffff;
+				 box-shadow: 0 4px 15px  rgb(0, 128, 0);
+				 animation: pulse 2s infinite;
+          }
+           #About
+          {
+          	display: flex;
+          	align-items: center;
+          	justify-content: space-between;
+          }
+
+          .About
+          {
+          	font-size: 24px;
+          	width: 75%;
+          	height: 20%;
+          	background-color: yellow;
+          }
+          @keyframes pulse {
+            0% {
+              transform: scale(1);
+              box-shadow: 0 4px 15px  rgb(0, 128, 0,0.5);
+            }
+            50% {
+              transform: scale(1.005);
+              box-shadow: 0 6px 20px  rgb(0, 128, 0,0.5);
+            }
+            100% {
+              transform: scale(1);
+              box-shadow: 0 4px 15px  rgb(0, 128, 0,0.5);
+            }
+          }
+          .AL
+          {
+          	margin-left: 50px;
+          	align-content: center;
+          	height: 45vh;
+          	width: 15vw;
+          	border-radius: 10%;
+          	animation: glow 3s infinite;
+          	padding: 0px;
+          }
+h1
+          {
+          	font-family: Verdana;
+          	color: sandybrown;
+          	-webkit-text-stroke: 1px darkblue	;
+          	text-shadow: 2px 2px blue;
+          }
+          .ServicesDone
+          {
+          	font-size: 24px;
+          	display: flex;
+          	flex-wrap: wrap;
+          	align-content: center;
+          	justify-content: space-between;
+          }
+          .About> P
+          {
+          	padding: 	10px;
+          }
+
+
+
+          .ABC
+          {
+          	font-size: 24px;
+          	width: 25%;
+          	height: 20%;
+          	float: 	left;
+          	
+          	color: white;
+          	margin: 0px;
+          	padding-top: 4px;
+          	padding-bottom: 10px;
+          }
+           .CC
+          {
+          	width: 31%;
+          	background-color: mistyrose;
+          	padding: 7px;
+          	border-radius: 20px;
+          	border-color: blueviolet;
+          	border-width: 2px;
+          	border-style: solid;
+          }
+          .CC:hover
+          {
+          	
+          	animation: coursecard;
+          }
+          @keyframes coursecard{
+          	{transform: scale(1.0);         }
+          	{transform: scale(1.5);}
+
+          }
+
+
+          .CC>h4
+          {
+          	font-style: Verdana;
+          	text-decoration: underline;
+          }
+
+          .CC > *
+          {
+          	background-color: mistyrose;
+          }
+
+          ul>*{
+          	background-color: mistyrose;
+          }
+          .EndLine
+          {
+          	background-color: blue;
+          	margin: 0px;
+          	font-family: cambria;
+          	text-align: center;
+          	color: yellow;
+          }
+
+          .EndLine > *
+          {
+          	padding: 0px;
+          	margin: 0px;
+          }
+
+          .EndLine > h2
+          {
+          	background-color: blue;
+          	font-size: 48px;
+          	text-shadow: 2px 2px red;
+          }
+
+          .EndLine > p 
+          {
+          	background-color: blue;
+          	margin: 20px;
+          }
+          .AL
+          {
+          	margin-left: 50px;
+          	align-content: center;
+          	height: 45vh;
+          	width: 15vw;
+          	border-radius: 10%;
+          	animation: glow 3s infinite;
+          	padding: 0px;
+          }
+
+</style>
+	<title>KG Computers</title>
+</head>
+<body>
+    <header>
+		<img src="kgcomputer2.jpeg" id="Logo">
+
+		<h1><b>KG Computers [Tambaram]</b></h1>
+			<a href="#AboutUs">About Us</a>
+			<a href="#ServicesDone">Services Done</a>
+			<a href="#ContactUs">Contact Us</a>
+			
+	</header>
+	<section>
+		<div class="tagline">
+           Your digital health, our mission
+        </div>
+
+	</section>
+	<section>
+		<H2 id="AboutUs"><ins>About Us</ins></H2>
+		<div id="About">
+		<div class="ABC">
+			<img class="AL" src="Founder.jpeg">
+		</div>
+		<div class="About">
+				<p> <big><big><b><ins>About the Proprietor</ins></b></big></big></p>
+
+				<p><big>Myself "Kumaraswamy", the Proprietor of the KG Computers. I has Twenty Years Of Field Work Experience. Recently, we have developed a shop at West Tambaram. It may be a small shop but our service is very big. Inspite of the shop size we have provided lot of Servies and Sales Options for our supporting customers!!... All Laptop Brands are servicable(Except ios) And We Have developed an Xerox and Printout Options For Offline Customers </big></p>
+			</div>
+		</div>
+		</section>
+		<section>
+			
+			<H2 id="ServicesDone"><ins>Services Done</ins></H2>
+			
+			<div class="ServicesDone">
+				<div class="CC">
+					<h4 style="font-style: Verdana;">Sales Options</h4>
+						<p>For sales we have "Home delivery and Installation" Option for Customers!.. </p>
+					
+					<ul>
+						<li> New Laptops and Computers </li>
+						<li>For Budget Friendly- Republished Laptops (Imported Laptops)</li>
+						<li>All Laptop and Computer Accessories  </li>
+						<li>Additionally Gaming Keybord and Mouses Available</li>
+						<li>Headphones (Airdopes, NeckBands, EarPhones)</li>
+					</ul>
+				</div>
+
+				<div class="CC">
+					<h4>Service Options</h4>
+					<ul>
+						<li>Ram Upgradation</li>
+						<li>Windows Installations</li>
+						<li>Antivirus Software</li>
+						<li>Broken Laptop Rework</li>
+						<li>Keybord problem(In Laptop)</li>
+						<li>Battery problem</li>
+						<li>Printer Service</li>
+						<li>Xerox and Printout Taken In Offline</li>
+					</ul>
+				</div>
+</section>
+<section>
+		<H2 id="ContactUs">Contact Us</H2>
+		<big><big>📞</big></big> <ins>Ph: 9094032045</ins><br><br>
+		<p><big><big>📍 Address </big></big></p> 
+		<p><big>No.6, Moogambigai Nagar 1st Main Rd, Vettri Nagar, West Tambaram, Tambaram, Tamil Nadu -600 045
+		</big></p><br>
+		<a  href="https://www.google.com/maps/place/K+G+Computers/@12.9236026,80.0926889,17z/data=!4m14!1m7!3m6!1s0x3a52f5837cf05ba5:0xc58377b558483ab3!2sK+G+Computers!8m2!3d12.9235974!4d80.0952638!16s%2Fg%2F11xldscgs2!3m5!1s0x3a52f5837cf05ba5:0xc58377b558483ab3!8m2!3d12.9235974!4d80.0952638!16s%2Fg%2F11xldscgs2?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D" ><b>Visit us!..</b></a>
+		</section>
+		<section class = "EndLine">
+			<h2>KG Computers</h2>
+		</section>
+</body>
+</html>
