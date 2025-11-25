@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KG Computers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: lightgoldenrodyellow;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        
+        section {
+            margin: 10px;
+            padding: 10px;
+        }
+        
+        /* Header Styles */
+        header {
+            margin: 0;
+            padding: 10px;
+            background-color: lightgoldenrodyellow;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+        
+        #Logo {
+            height: 50px;
+            border-radius: 15px;
+            border: 2px solid darkred;
+        }
+        
+        header h1 {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-family: Verdana;
+            color: sandybrown;
+            -webkit-text-stroke: 1px darkblue;
+            text-shadow: 2px 2px blue;
+            text-align: center;
+            margin: 0 10px;
+        }
+        
+        nav {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        nav a {
+            background-color: yellow;
+            color: blueviolet;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 10px;
+            border: 2px solid darkred;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+        
+        nav a:hover {
+            background-color: darkblue;
+            color: yellow;
+            border: 2px solid black;
+        }
+        
+        /* Tagline Styles */
+        .tagline {
+            font-size: clamp(1rem, 4vw, 1.5rem);
+            font-weight: bold;
+            color: #ff5720;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 1vw;
+            border: 2px solid darkblue;
+            border-radius: 10px;
+            background: #ffffff;
+            box-shadow: 0 4px 15px rgb(0, 128, 0);
+            animation: pulse 2s infinite;
+            margin: 10px 0;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(0, 128, 0, 0.5);
+            }
+            50% {
+                transform: scale(1.005);
+                box-shadow: 0 6px 20px rgba(0, 128, 0, 0.5);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(0, 128, 0, 0.5);
+            }
+        }
+        
+        /* About Section */
+        #About {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        @media (min-width: 768px) {
+            #About {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+        
+        .ABC {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .AL {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 10%;
+            animation: glow 3s infinite;
+        }
+        
+        @keyframes glow {
+            0% { box-shadow: 0 0 5px gold; }
+            50% { box-shadow: 0 0 20px gold; }
+            100% { box-shadow: 0 0 5px gold; }
+        }
+        
+        .About {
+            font-size: 1rem;
+            width: 100%;
+            background-color: yellow;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        @media (min-width: 768px) {
+            .About {
+                width: 75%;
+                font-size: 1.1rem;
+            }
+        }
+        
+        .About p {
+            padding: 10px;
+        }
+        
+        /* Services Section */
+        .ServicesDone {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        @media (min-width: 768px) {
+            .ServicesDone {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+        
+        .CC {
+            width: 100%;
+            background-color: mistyrose;
+            padding: 15px;
+            border-radius: 20px;
+            border: 2px solid blueviolet;
+            transition: transform 0.3s ease;
+        }
+        
+        @media (min-width: 768px) {
+            .CC {
+                width: 48%;
+            }
+        }
+        
+        .CC:hover {
+            transform: scale(1.02);
+        }
+        
+        .CC h4 {
+            font-family: Verdana;
+            text-decoration: underline;
+            margin-bottom: 10px;
+        }
+        
+        .CC > * {
+            background-color: mistyrose;
+        }
+        
+        ul > * {
+            background-color: mistyrose;
+        }
+        
+        .CC ul {
+            padding-left: 20px;
+        }
+        
+        /* Contact Section */
+        .contact-info {
+            padding: 10px;
+        }
+        
+        .contact-info p {
+            margin: 10px 0;
+        }
+        
+        .map-link {
+            display: inline-block;
+            background-color: yellow;
+            color: blueviolet;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 10px;
+            border: 2px solid darkred;
+            margin-top: 10px;
+        }
+        
+        .map-link:hover {
+            background-color: darkblue;
+            color: yellow;
+        }
+        
+        /* Footer */
+        .EndLine {
+            background-color: blue;
+            margin: 0;
+            font-family: Cambria, serif;
+            text-align: center;
+            color: yellow;
+            padding: 20px 0;
+        }
+        
+        .EndLine h2 {
+            background-color: blue;
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            text-shadow: 2px 2px red;
+            margin-bottom: 10px;
+        }
+        
+        .EndLine p {
+            background-color: blue;
+            margin: 0;
+        }
+        
+        /* Headings */
+        h2 {
+            font-size: 1.5rem;
+            margin: 20px 0 15px;
+            color: darkblue;
+        }
+        
+        @media (min-width: 768px) {
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        /* Mobile Navigation Toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: darkblue;
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            nav {
+                width: 100%;
+                flex-direction: column;
+                display: none;
+            }
+            
+            nav.active {
+                display: flex;
+            }
+            
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                top: 15px;
+                right: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="kgcomputer2.jpeg" alt="KG Computers Logo" id="Logo">
+        <h1><b>KG Computers [Tambaram]</b></h1>
+        <button class="menu-toggle">☰</button>
+        <nav id="main-nav">
+            <a href="#AboutUs">About Us</a>
+            <a href="#ServicesDone">Services Done</a>
+            <a href="#ContactUs">Contact Us</a>
+        </nav>
+    </header>
+    
+    <section>
+        <div class="tagline">
+            Your digital health, our mission
+        </div>
+    </section>
+    
+    <section>
+        <h2 id="AboutUs"><ins>About Us</ins></h2>
+        <div id="About">
+            <div class="ABC">
+                <img class="AL" src="Founder.jpeg" alt="Founder of KG Computers">
+            </div>
+            <div class="About">
+                <p><big><b><ins>About the Proprietor</ins></b></big></p>
+                <p>Myself "Kumaraswamy", the Proprietor of the KG Computers. I has Twenty Years Of Field Work Experience. Recently, we have developed a shop at West Tambaram. It may be a small shop but our service is very big. Inspite of the shop size we have provided lot of Servies and Sales Options for our supporting customers!!... All Laptop Brands are servicable(Except ios) And We Have developed an Xerox and Printout Options For Offline Customers</p>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h2 id="ServicesDone"><ins>Services Done</ins></h2>
+        <div class="ServicesDone">
+            <div class="CC">
+                <h4>Sales Options</h4>
+                <p>For sales we have "Home delivery and Installation" Option for Customers!..</p>
+                <ul>
+                    <li>New Laptops and Computers</li>
+                    <li>For Budget Friendly- Republished Laptops (Imported Laptops)</li>
+                    <li>All Laptop and Computer Accessories</li>
+                    <li>Additionally Gaming Keybord and Mouses Available</li>
+                    <li>Headphones (Airdopes, NeckBands, EarPhones)</li>
+                </ul>
+            </div>
+            
+            <div class="CC">
+                <h4>Service Options</h4>
+                <ul>
+                    <li>Ram Upgradation</li>
+                    <li>Windows Installations</li>
+                    <li>Antivirus Software</li>
+                    <li>Broken Laptop Rework</li>
+                    <li>Keybord problem(In Laptop)</li>
+                    <li>Battery problem</li>
+                    <li>Printer Service</li>
+                    <li>Xerox and Printout Taken In Offline</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h2 id="ContactUs">Contact Us</h2>
+        <div class="contact-info">
+            <p><big>📞</big> <ins>Ph: 9094032045</ins></p>
+            <p><big>📍 Address</big></p>
+            <p>No.6, Moogambigai Nagar 1st Main Rd, Vettri Nagar, West Tambaram, Tambaram, Tamil Nadu -600 045</p>
+            <a href="https://www.google.com/maps/place/K+G+Computers/@12.9236026,80.0926889,17z/data=!4m14!1m7!3m6!1s0x3a52f5837cf05ba5:0xc58377b558483ab3!2sK+G+Computers!8m2!3d12.9235974!4d80.0952638!16s%2Fg%2F11xldscgs2!3m5!1s0x3a52f5837cf05ba5:0xc58377b558483ab3!8m2!3d12.9235974!4d80.0952638!16s%2Fg%2F11xldscgs2?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D" class="map-link"><b>Visit us!..</b></a>
+        </div>
+    </section>
+    
+    <section class="EndLine">
+        <h2>KG Computers</h2>
+        <p>Your trusted computer service partner</p>
+    </section>
+
+    <script>
+        // Mobile menu toggle functionality
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.getElementById('main-nav').classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('main-nav').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
